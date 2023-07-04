@@ -1,0 +1,35 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2023-07-03 17:34:25.625296",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2023-07-03 17:34:57.201098",
+ "modified_by": "Administrator",
+ "module": "Finbyz Einvoice",
+ "name": "Bill of Entry Summary",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Bill of Entry",
+ "report_name": "Bill of Entry Summary",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Purchase User"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Auditor"
+  }
+ ]
+}

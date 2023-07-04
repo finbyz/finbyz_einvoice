@@ -1,0 +1,20 @@
+[pre_model_sync]
+
+
+[post_model_sync]
+finbyz_einvoice.patches.v14.set_default_for_overridden_accounts_setting
+execute:from finbyz_einvoice.gst_india.setup import create_custom_fields; create_custom_fields() #13
+execute:from finbyz_einvoice.gst_india.setup import create_property_setters; create_property_setters() #2
+finbyz_einvoice.patches.post_install.update_custom_role_for_e_invoice_summary
+finbyz_einvoice.patches.v14.remove_ecommerce_gstin_from_purchase_invoice
+finbyz_einvoice.patches.v14.set_sandbox_mode_in_gst_settings
+execute:from finbyz_einvoice.gst_india.setup import add_fields_to_item_variant_settings; add_fields_to_item_variant_settings()
+execute:from finbyz_einvoice.gst_india.setup import create_accounting_dimension_fields; create_accounting_dimension_fields()
+execute:from finbyz_einvoice.audit_trail.setup import setup_fixtures; setup_fixtures()
+finbyz_einvoice.patches.v14.set_default_for_audit_trail_notification
+finbyz_einvoice.patches.post_install.update_state_name_to_puducherry
+finbyz_einvoice.patches.post_install.rename_import_of_capital_goods
+execute:from finbyz_einvoice.audit_trail.setup import create_custom_fields, CUSTOM_FIELDS; create_custom_fields(CUSTOM_FIELDS)
+finbyz_einvoice.patches.post_install.update_hsn_code
+execute:from finbyz_einvoice.gst_india.setup import map_default_uoms; map_default_uoms()
+finbyz_einvoice.patches.v14.set_autogenerate_e_waybill_with_e_invoice
