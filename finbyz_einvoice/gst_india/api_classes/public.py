@@ -32,7 +32,7 @@ class PublicAPI(BaseAPI):
         return self.get("search", params={"action": "TP", "gstin": gstin})
 
 def get_auth_token(self):
-	if time_diff_in_seconds(self.gst_settings.token_expiry, now_datetime()) < 150.0:
+	if time_diff_in_seconds(self.gst_settings.token_expiry, now_datetime()) < 150.0 or not self.gst_settings.auth_token:
 		fetch_auth_token(self)
 
 	return self.gst_settings.auth_token
