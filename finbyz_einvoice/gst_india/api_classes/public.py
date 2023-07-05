@@ -54,7 +54,7 @@ def fetch_auth_token(self):
 
 def get_client_details(self):
 	if self.gst_settings.get('client_id') and self.gst_settings.get('client_secret'):
-		return self.gst_settings.get('client_id'), get_decrypted_password("GST Settings", "GST Settings", fieldname = "client_secret")
+		return get_decrypted_password("GST Settings", "GST Settings", fieldname = "client_id"), get_decrypted_password("GST Settings", "GST Settings", fieldname = "client_secret")
 
 	return frappe.conf.einvoice_client_id, frappe.conf.einvoice_client_secret
 

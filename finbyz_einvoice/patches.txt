@@ -18,3 +18,4 @@ execute:from finbyz_einvoice.audit_trail.setup import create_custom_fields, CUST
 finbyz_einvoice.patches.post_install.update_hsn_code
 execute:from finbyz_einvoice.gst_india.setup import map_default_uoms; map_default_uoms()
 finbyz_einvoice.patches.v14.set_autogenerate_e_waybill_with_e_invoice
+finbyz_einvoice.patches.v14.custom_fields_for_gsp
