@@ -43,3 +43,16 @@ def create_custom_field_for_einvoice():
         doc.insert_after = "client_id"
         doc.fieldtype = "Password"
         doc.save(ignore_permissions=True)
+    
+    if not frappe.db.exists("Custom Field", "Sales Invoice-qrcode_image"):
+        doc = frappe.new_doc("Custom Field")
+        doc.dt = "Sales Invoice"
+        doc.label = "QRCode Image"
+        doc.fieldname = "qrcode_image"
+        doc.fieldtype = "Code"
+        doc.options = "JSON"
+        doc.read_only == 1
+        doc.hidden==1
+        doc.no_copy == 1
+        doc.allow_on_submit == 1
+        doc.save(ignore_permissions=True)
